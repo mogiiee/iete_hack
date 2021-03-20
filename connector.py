@@ -15,7 +15,7 @@ class User:
             "id": uuid.uuid4().hex,
             'name': request.form.get('name'),
             'phone_number': request.form.get('phone_number'),
-            'password': request.form.get('password')
+            
 
         }
         if db.users.find_one({"email": user['email']}):
