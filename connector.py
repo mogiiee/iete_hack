@@ -14,7 +14,7 @@ class User:
         user = {
             "id": uuid.uuid4().hex,
             'name': request.form.get('name'),
-            'email': request.form.get('email'),
+            'phone_number': request.form.get('phone_number'),
             'password': request.form.get('password')
 
         }
