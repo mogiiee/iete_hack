@@ -1,37 +1,27 @@
-from authy.api import AuthyApiClient
-from flask import Flask, render_template, request, redirect, url_for
-
-
-
-
-@app.route("/phone_verification", methods=["GET", "POST"])
-def phone_verification():
-    return render_template("phone_verification.html")
-
+import random  # generate random number
+from twilio.rest import Client
+from flask import Flask, render_template
 app = Flask(__name__)
-app.config.from_object('config')
-
-api = AuthyApiClient(app.config['AUTHY_API_KEY'])
 
 
-@app.route("/phone_verification", methods=["GET", "POST"])
-def phone_verification():
-    pass
-
-@app.route("/phone_verification", methods=["GET", "POST"])
-def phone_verification():
-    if request.method == "POST":
-        country_code = request.form.get("country_code")
-        phone_number = request.form.get("phone_number")
-        method = request.form.get("method")
-        
-        api.phones.verification_start(phone_number, country_code, via=method)
-        
-        return redirect(url_for("verify"))
+@app.route('/')
+def home():
+    return render_template('phone_verification.html')
 
 
-    return render_template("phone_verification.html")
+otp = random.randint(100000, 999999)
+print("Your OTP is - ", otp)
+# Your Account Sid and Auth Token from twilio.com/console
+# DANGER! This is insecure. See http://twil.io/secure
+account_sid = 'AC69f62dfca2244ab12c4c405908493828'
+auth_token = '426792209806bec4d7e7288e0191a0eb'
+client = Client(account_sid, auth_token)
 
+message = client.messages.create(
+    body='Hello Mr. Mayur Your Secure Device OTP is - ' +
+    str(otp) + 'now your mobile is hacked!\n Byby...',
+    from_='+18102165316',
+    to='+917013764661'
+)
 
-if __name__ == '__main__':
-    app.run(debug=True)
+print(message.sid)
