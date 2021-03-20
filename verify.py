@@ -1,27 +1,60 @@
-import random  # generate random number
+from flask import Flask, request, render_template
 from twilio.rest import Client
-from flask import Flask, render_template
+import random
+
 app = Flask(__name__)
+app.secret_key = 'otp'
 
 
 @app.route('/')
 def home():
-    return render_template('phone_verification.html')
+    return render_template('/login.html')
 
 
-otp = random.randint(100000, 999999)
-print("Your OTP is - ", otp)
-# Your Account Sid and Auth Token from twilio.com/console
-# DANGER! This is insecure. See http://twil.io/secure
-account_sid = 'AC69f62dfca2244ab12c4c405908493828'
-auth_token = '426792209806bec4d7e7288e0191a0eb'
-client = Client(account_sid, auth_token)
+@app.route('/getOTP', methods=['POST'])
+def getOTP():
+    number = request.form['number']
+    val = getOTPApi(number)
+    if val:
+        return render_template('enterOTP.html')
 
-message = client.messages.create(
-    body='Hello Mr. Mayur Your Secure Device OTP is - ' +
-    str(otp) + 'now your mobile is hacked!\n Byby...',
-    from_='+18102165316',
-    to='+917013764661'
-)
 
-print(message.sid)
+@app.route('/ValidateOTP', methods=['POST'])
+def validateOTP():
+    otp = request.form['otp']
+    if "response" in session:
+        s = session['response']
+        session.pop('response', None)
+        if s == otp:
+            return "you are auth, talk to the doc "
+        else:
+            return "wrong otp try again"
+
+
+session = {}
+
+
+def generateOTP():
+    return random.randrange(100000, 999999)
+
+
+def getOTPApi(number):
+    ssid = ''' i'll enter when needed'''
+    auth_token = ''' i'll enter when needed'''
+    client = Client(ssid, auth_token)
+    otp = generateOTP()
+    session['response'] = str(otp)
+    body = 'your otp is' + str(otp)
+    message = client.messages.create(
+        from_='+18102165316',
+        body=body,
+        to=number
+    )
+    if message.sid:
+        return True
+    else:
+        False
+
+
+if __name__ == "__main__":
+    app.run(debug=True)
