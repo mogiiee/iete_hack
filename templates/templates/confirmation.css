@@ -1,0 +1,145 @@
+*{
+  padding: 0;
+  margin:0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+body{
+  font-family: roboto;
+  background-color: #F9F9F9;
+}
+
+nav{
+  background: #FD961E;
+  height: 41px;
+  width: 100%;
+}
+img.account{
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  right: 107px;
+  top: 9px;
+}
+label.account{
+  position: absolute;
+  width: 64px;
+  height: 12px;
+  right: 40px;
+  top: 10px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 10px;
+  line-height: 12px;
+
+
+  text-align: center;
+
+  color: #FFFFFF;
+}
+
+label.account:hover{
+  cursor: pointer;
+  background: #FD961E;
+  color: #fff;
+}
+
+label.login:hover{
+  cursor: pointer;
+  background: #FD961E;
+  color: #fff;
+}
+
+
+label.login{
+  position: absolute;
+  width: 19px;
+  height: 9px;
+  right: 80px;
+  top: 23px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 7.5px;
+  line-height: 9px;
+
+
+  text-align: center;
+
+  color: #FFFFFF;
+}
+
+
+
+.acceptbox{
+  width: 487px;
+  height: 269px;
+  background: #FD961E;
+  top: 53%;
+  left: 50%;
+  position: absolute;
+  background: #FFFFFF;
+  border: 1.5px solid #C1C0BF;
+  box-sizing: border-box;
+  border-radius: 19px;
+  transform: translate(-50%, -50%);
+  padding: 18px 10px;
+}
+
+label.text1{
+  position: absolute;
+  width: 100%;
+  height: 9px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 35px;
+
+
+  text-align: center;
+
+  color: #000;
+}
+
+.acceptbox input[type="cancel"]{
+  border: none;
+  outline: none;
+  width: 94px;
+  height: 26.58px;
+  border-radius: 6px;
+  margin-left: 80px;
+  margin-top: 204px; 
+  background: rgba(5, 5, 5, 0.15);
+  padding-left: 25px;
+}
+
+.acceptbox input[type="cancel"]:hover{
+  cursor: pointer;
+  background: rgba(5, 5, 5, 0.15);
+  color: #fff;
+}
+
+.acceptbox input[type="accept"]{
+  border: none;
+  outline: none;
+  width: 94px;
+  height: 26.58px;
+  border-radius: 6px;
+  margin-left: 115px;
+  margin-top: 204px; 
+  background: #FD961E;
+  padding-left: 25px;
+  
+}
+
+.acceptbox input[type="accept"]:hover{
+  cursor: pointer;
+  background: #FD961E;
+  color: #fff;
+}
