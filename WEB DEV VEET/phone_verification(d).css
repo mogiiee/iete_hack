@@ -1,0 +1,214 @@
+*{
+    padding: 0;
+    margin:0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+  }
+  body{
+    font-family: roboto;
+  }
+  
+  nav{
+    background: #FD961E;
+    height: 41px;
+    width: 100%;
+  }
+  img.account{
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    right: 107px;
+    top: 9px;
+  }
+  label.account{
+    position: absolute;
+    width: 64px;
+    height: 12px;
+    right: 40px;
+    top: 10px;
+  
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 10px;
+    line-height: 12px;
+  /* identical to box height */
+  
+    text-align: center;
+  
+    color: #FFFFFF;
+  }
+  
+  label.account:hover{
+    cursor: pointer;
+    background: #FD961E;
+    color: #fff;
+  }
+  
+  label.login:hover{
+    cursor: pointer;
+    background: #FD961E;
+    color: #fff;
+  }
+  
+  label.nu{
+    position: absolute;
+    width: 19px;
+    height: 13px;
+    left: 35px;
+    top: 268px;
+  
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 13px;
+    /* identical to box height */
+  
+    text-align: center;
+  
+    color: #848484;
+  }
+  
+  label.login{
+    position: absolute;
+    width: 19px;
+    height: 9px;
+    right: 80px;
+    top: 23px;
+  
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 7.5px;
+    line-height: 9px;
+    /* identical to box height */
+  
+    text-align: center;
+  
+    color: #FFFFFF;
+  
+  }
+  .loginbox{
+    width: 320px;
+    height: 420px;
+    background: #FD961E;
+    top: 53%;
+    left: 50%;
+    position: absolute;
+    background: #FFFFFF;
+    border: 1.5px solid #C1C0BF;
+    box-sizing: border-box;
+    border-radius: 19px;
+    transform: translate(-50%, -50%);
+    padding: 70px 30px;
+  }
+  
+  img.patientlogo{
+    position: absolute;
+    width: 72px;
+    height: 73px;
+    margin-left: 100px;
+  
+  }
+  
+  h1{
+    position: absolute;
+    width: 84px;
+    height: 28px;
+    left: 122px;
+    top: 154px;
+  
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+  
+    color: #040404;
+  }
+  
+  h3{
+    position: absolute;
+    width: 179px;
+    height: 13px;
+    left: 26px;
+    top: 204px;
+  
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 11px;
+    line-height: 13px;
+  /* identical to box height */
+  
+    text-align: left;
+  
+    color: #868585;
+  }
+  
+  .loginbox input[type="text"]{
+    border:1px solid #A4A3A3;
+    outline: none;
+    background: transparent;
+    font-family: roboto;
+    height: 30px;
+    width: 100%;
+    border-radius: 6px;
+    margin-top: 155px;
+    padding: 10px;
+    padding-left: 35px;
+    padding-right: 35px;
+  }  
+  
+  .loginbox input[type="mobile"]{
+    border:1px solid #A4A3A3;
+    outline: none;
+    background: transparent;
+    height: 30px;
+    width: 100%;
+    font-family: roboto;
+    border-radius: 6px;
+    margin-top: 5px;
+    padding: 10px;
+    padding-left: 35px;
+    padding-right: 35px;
+  }  
+  
+  .loginbox input[type="submit"]{
+    border: none;
+    outline: none;
+    width: 94px;
+    height: 26.58px;
+    border-radius: 6px;
+    margin-left: 162px;
+    margin-top: 13.6px;
+  }
+  
+  .loginbox input[type="submit"]:hover{
+    cursor: pointer;
+    background: #FD961E;
+    color: #fff;
+  }
+  
+  .loginbox a.patient{
+    text-decoration: none;
+    font-size: 11px;
+    line-height: 20px;
+    color: #F89500;
+    margin-left: 16px;
+  }
+  
+  .loginbox a.doctor{
+    text-decoration: none;
+    font-size: 11px;
+    color: #C0C0C0;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 13px;
+    margin-left: 60px;
+  }
+  

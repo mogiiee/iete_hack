@@ -1,0 +1,85 @@
+*{
+  padding: 0;
+  margin:0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+body{
+  font-family: roboto;
+  background-color: #F9F9F9;
+}
+
+nav{
+  background: #FD961E;
+  height: 41px;
+  width: 100%;
+}
+img.account{
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  right: 107px;
+  top: 9px;
+}
+label.account{
+  position: absolute;
+  width: 64px;
+  height: 12px;
+  right: 40px;
+  top: 10px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 10px;
+  line-height: 12px;
+
+
+  text-align: center;
+
+  color: #FFFFFF;
+}
+
+label.account:hover{
+  cursor: pointer;
+  background: #FD961E;
+  color: #fff;
+}
+
+label.login:hover{
+  cursor: pointer;
+  background: #FD961E;
+  color: #fff;
+}
+
+
+label.login{
+  position: absolute;
+  width: 19px;
+  height: 9px;
+  right: 80px;
+  top: 23px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 7.5px;
+  line-height: 9px;
+
+
+  text-align: center;
+
+  color: #FFFFFF;
+}
+
+img.check{
+  width: 248px;
+  height: 248px;
+  margin-left: 43%;
+  margin-top: 13%;
+  position: absolute;
+  float: center;
+  
+
+}
